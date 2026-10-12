@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "1.0",
+  "contributionMap": [
+    {
+      "claim": "Four fixed congruence statements",
+      "unit": "statement",
+      "paperLocation": "certificates Theorems 1–2",
+      "closestPriorWork": "Bharadwaj–Sujatha–Chandankumar 2607.16608, Theorem4.4 eq4.51 and conjectures",
+      "verdict": "known-cited",
+      "searches": [
+        {
+          "date": "2026-10-12",
+          "query": "2-colour overpartition congruences square twice square binary quadratic forms odd part 1 modulo 8"
+        }
+      ]
+    },
+    {
+      "claim": "Complete exact eta/Sturm certificates for the four statements",
+      "unit": "proof",
+      "paperLocation": "certificates Sections2–4",
+      "closestPriorWork": "BSC source elementary methods; standard Ono/Radu/Sturm certificate method",
+      "verdict": "new-in-bounded-search",
+      "searches": [
+        {
+          "date": "2026-10-12",
+          "query": "2-colour overpartition congruences square twice square binary quadratic forms odd part 1 modulo 8"
+        }
+      ]
+    },
+    {
+      "claim": "Exact modulo-eight parameter iff and uniform exclusion witnesses",
+      "unit": "statement",
+      "paperLocation": "families Theorem1",
+      "closestPriorWork": "BSC Conjecture1; KSV2009 Theorem9 covers ell1; Hirschhorn–Sellers2005 Thm2(6) implies 4|ell",
+      "verdict": "partially-known-cited",
+      "searches": [
+        {
+          "date": "2026-10-12",
+          "query": "2-colour overpartition congruences square twice square binary quadratic forms odd part 1 modulo 8"
+        }
+      ]
+    },
+    {
+      "claim": "Square or twice-square binary-form nonrepresentation support",
+      "unit": "statement",
+      "paperLocation": "families Theorem6",
+      "closestPriorWork": "Classical reciprocal-theta modulo powers of two methods of Mahlburg and Kim",
+      "verdict": "new-in-bounded-search",
+      "searches": [
+        {
+          "date": "2026-10-12",
+          "query": "2-colour overpartition congruences square twice square binary quadratic forms odd part 1 modulo 8"
+        }
+      ]
+    },
+    {
+      "claim": "Sufficient dyadic family for ell with odd part1mod8",
+      "unit": "statement",
+      "paperLocation": "families Theorem7",
+      "closestPriorWork": "Includes BSC ell9 conjecture and classical binary-form parity exclusions",
+      "verdict": "new-in-bounded-search",
+      "searches": [
+        {
+          "date": "2026-10-12",
+          "query": "2-colour overpartition congruences square twice square binary quadratic forms odd part 1 modulo 8"
+        }
+      ]
+    },
+    {
+      "claim": "Eta multipliers/Sturm finite closure and reciprocal-theta parity",
+      "unit": "method",
+      "paperLocation": "Both papers proof sections",
+      "closestPriorWork": "Ono2004, Radu2009, Sturm1987; Mahlburg2004, Hirschhorn–Sellers2005, Kim2008",
+      "verdict": "known-cited",
+      "searches": [
+        {
+          "date": "2026-10-12",
+          "query": "2-colour overpartition congruences square twice square binary quadratic forms odd part 1 modulo 8"
+        }
+      ]
+    },
+    {
+      "claim": "Pairs of overpartitions with second parts divisible by ell",
+      "unit": "object",
+      "paperLocation": "Both introductions",
+      "closestPriorWork": "BSC; ell1 overpartition pairs and ell2 overcubic function are known",
+      "verdict": "known-cited",
+      "searches": [
+        {
+          "date": "2026-10-12",
+          "query": "2-colour overpartition congruences square twice square binary quadratic forms odd part 1 modulo 8"
+        }
+      ]
+    }
+  ],
+  "sourcesReadInFull": [
+    {
+      "citation": "Bharadwaj–Sujatha–Chandankumar, arXiv2607.16608v1",
+      "usedFor": "Object, statements and attribution ambiguity",
+      "readWhat": "Theorem4.4 including eq4.51 and source conjecture list; supplied same-day source audit inspected for proof comparison",
+      "date": "2026-10-12",
+      "evidenceLocator": "CITATION_AUDIT.md; https://arxiv.org/html/2607.16608v1"
+    },
+    {
+      "citation": "Keister–Sellers–Vary, Integers9(2009),181–190",
+      "usedFor": "ell1 known special case",
+      "readWhat": "Theorem9 k2 and its proof, pages4–6",
+      "date": "2026-10-12",
+      "evidenceLocator": "https://math.colgate.edu/~integers/j17/j17.pdf; CITATION_AUDIT.md"
+    },
+    {
+      "citation": "Hirschhorn–Sellers, JCMCC53(2005),65–73",
+      "usedFor": "Ordinary overpartition congruence implies4|ell",
+      "readWhat": "Theorem2 equation6 and proof",
+      "date": "2026-10-12",
+      "evidenceLocator": "https://www.d.umn.edu/~jsellers/jcmcc_updated.pdf; CITATION_AUDIT.md"
+    }
+  ],
+  "limitationTriage": [
+    {
+      "limitation": "Modulo-eight necessity",
+      "closingQuestion": "General witness rather than samples?",
+      "triedOrSearched": "Added ell or ell+1 witnesses from ordinary congruence",
+      "estimatedCost": "Under2h",
+      "cheap": true,
+      "decision": "CLOSED"
+    },
+    {
+      "limitation": "Broaden ell9 modulo16",
+      "closingQuestion": "Known binary forms or parity generalization?",
+      "triedOrSearched": "Proved square/twice-square support and sufficient oddpart1mod8 dyadic family",
+      "estimatedCost": "Under2h",
+      "cheap": true,
+      "decision": "CLOSED"
+    },
+    {
+      "limitation": "Stronger uniform moduli",
+      "closingQuestion": "Does doubling work?",
+      "triedOrSearched": "Exact minimal displayed counterexamples in paper",
+      "estimatedCost": "Under2h",
+      "cheap": true,
+      "decision": "CLOSED"
+    },
+    {
+      "limitation": "Full support for every oddpart1 parameter",
+      "closingQuestion": "Does same support extension hold?",
+      "triedOrSearched": "ell17,N21 gives9932=12mod16; rejected",
+      "estimatedCost": "Under2h",
+      "cheap": true,
+      "decision": "CLOSED"
+    },
+    {
+      "limitation": "Necessity for the larger modulo16 parameter family",
+      "closingQuestion": "Can parity supply all excluded-parameter witnesses?",
+      "triedOrSearched": "Finite tests were exploratory only; no uniform converse obtained",
+      "estimatedCost": "Unknown; nontrivial new research",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "Sufficient theorem only; no general converse proof."
+    },
+    {
+      "limitation": "Global novelty and high REF rating",
+      "closingQuestion": "Can bounded source searches establish priority or broad significance?",
+      "triedOrSearched": "Compared exact statements, known cases and methods; no claim of complete coverage",
+      "estimatedCost": "Unbounded literature/expert assessment",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "Specialized contribution; no four-star rating asserted."
+    },
+    {
+      "limitation": "Formal verification and unaffiliated reproduction",
+      "closingQuestion": "Can current exact replay establish either?",
+      "triedOrSearched": "Normal/optimized and standard-library diverse replay; inspected written proofs",
+      "estimatedCost": "New independent project",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "Internal checking is not either assurance dimension."
+    }
+  ],
+  "extensionScout": {
+    "by": "Codex main agent with targeted fresh internal extension audit",
+    "date": "2026-10-12",
+    "proposals": [
+      "Exact mod8 classification",
+      "Binary-form support",
+      "General oddpart1 dyadic sufficient theorem",
+      "Uniform sharpness and forbidden enlargement"
+    ],
+    "actions": [
+      "Implemented and proved first three; exact counterexamples delimit strengthening. See reviews/revision-response.md."
+    ]
+  }
+}
