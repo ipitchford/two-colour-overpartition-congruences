@@ -1,0 +1,114 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}\usepackage{url}\usepackage{booktabs}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\pb}{\overline{p}}
+\title{Exact modular-form certificates for four 2-colour overpartition congruences}
+\author{Anonymous}\date{12 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+For positive integers $\ell$, define $\sum_{n\ge0}\pb_\ell(n)q^n=f_2f_{2\ell}/(f_1^2f_\ell^2)$, where $f_k=\prod_{m\ge1}(1-q^{km})$. We give exact modular-form certificates for $\pb_8(32n+28)\equiv0\pmod{32}$, $\pb_6(24n+17)\equiv\pb_6(24n+23)\equiv0\pmod{64}$ and $\pb_9(36n+33)\equiv0\pmod{128}$. The first statement already occurs in Bharadwaj--Sujatha--Chandankumar's Theorem~4.4, as well as their conjecture list; we provide a complete independent certificate, not new statement priority. At most $541$ extracted Fourier coefficients are tested against a Sturm bound. The largest selected index of the underlying form is $19{,}440$, and the direct progression confirmation reaches $19{,}473$.
+\end{abstract}
+
+\section{Introduction}
+Let $f_k=(q^k;q^k)_\infty$. In~\cite{BSC} Bharadwaj, Sujatha and Chandankumar study the functions $\pb_\ell(n)$ with
+\[\sum_{n\ge0}\pb_\ell(n)q^n=\frac{f_2\,f_{2\ell}}{f_1^2\,f_\ell^2},\]
+the generating function of pairs of overpartitions in which the second component has all parts divisible by~$\ell$. Their methods are elementary ($q$-series dissections), and they deliberately avoid modular forms. In their final section they state the following.
+
+\begin{theorem}[Statements in~\cite{BSC}; attribution below]\label{thm:main}
+For all $n\ge0$,
+\begin{align*}
+\pb_{8}(32n+28)&\equiv0\pmod{32},\\
+\pb_{6}(24n+17)&\equiv0\pmod{64},\\
+\pb_{6}(24n+23)&\equiv0\pmod{64}.
+\end{align*}
+\end{theorem}
+
+\begin{theorem}[Second congruence of a further conjecture in~\cite{BSC}]\label{thm:nine}
+For all $n\ge0$, $\pb_{9}(36n+33)\equiv0\pmod{128}$.
+\end{theorem}
+
+The first congruence is the $\alpha=2$ case of \cite[Theorem~4.4, equation~(4.51)]{BSC}, and also appears in its Conjecture~2, equation~(5.4). The inspected proof does not explicitly derive the full all-$\alpha$ assertion. We record this ambiguity rather than claim either new statement priority or a complete earlier proof. The other three are equations~(5.5), (5.6), (5.8) of that source. No exact earlier proof was located in the bounded search documented with this collection; this is not a priority certification. The companion family paper treats the modulo-$8$ parameter family and extends the dyadic modulo-$16$ family.
+
+We prove Theorems~\ref{thm:main} and~\ref{thm:nine} by the standard method of Ono and Radu~\cite{Ono,Radu}: we multiply the generating function by an eta-quotient in $q^M$ chosen to make it a holomorphic modular form, apply $U_M$, and check the finitely many coefficients that Sturm's theorem~\cite{Sturm} requires. The only work is finding suitable multipliers. We found them by integer linear programming; the proof itself depends only on checking the certificates in Table~\ref{tab:cert}.
+
+\section{Tools}
+Let $\eta(z)=q^{1/24}f_1$ with $q=e^{2\pi iz}$. An eta-quotient is $F(z)=\prod_{d\mid N}\eta(dz)^{r_d}$.
+
+\begin{lemma}[Gordon--Hughes--Newman, Ligozat; {\cite[Thms.~1.64, 1.65]{Ono}}]\label{lem:ghn}
+Suppose $k=\tfrac12\sum r_d$ is a positive integer, $\sum_d d\,r_d\equiv0\pmod{24}$ and $\sum_d (N/d)\,r_d\equiv0\pmod{24}$. Then $F$ satisfies the transformation law of weight $k$ on $\Gamma_0(N)$ with character $\chi(m)=\bigl(\tfrac{(-1)^ks}{m}\bigr)$, where $s=\prod d^{r_d}$. If moreover for every divisor $c\mid N$
+\[\frac{N}{24}\sum_{d\mid N}\frac{\gcd(c,d)^2\,r_d}{\gcd(c,N/c)\,c\,d}\;\ge\;0,\]
+then $F$ is holomorphic at all cusps, so $F\in M_k(\Gamma_0(N),\chi)$.
+\end{lemma}
+
+\begin{lemma}[{\cite[Prop.~2.22]{Ono}}]\label{lem:U}
+Let $\chi$ be a Dirichlet character modulo $N$. If $M\mid N$, then $U_M:\sum a(n)q^n\mapsto\sum a(Mn)q^n$ maps $M_k(\Gamma_0(N),\chi)$ to itself.
+\end{lemma}
+
+\begin{lemma}[Sturm~\cite{Sturm}; {\cite[Thm.~2.58]{Ono}}]\label{lem:sturm}
+Let $G\in M_k(\Gamma_0(N),\chi)$ have integer coefficients $a(n)$, and let $p$ be a prime. If $a(n)\equiv0\pmod p$ for all $n\le S=\tfrac{k}{12}[\mathrm{SL}_2(\mathbb Z):\Gamma_0(N)]$, then $a(n)\equiv0\pmod p$ for all $n$.
+\end{lemma}
+
+Applying Lemma~\ref{lem:sturm} $j$ times shows that if $2^j\mid a(n)$ for all $n\le S$ then $2^j\mid G$. After each step, $G/2$ is again in $M_k(\Gamma_0(N),\chi)$ with integer coefficients.
+
+\section{The reduction}
+Fix $\ell$, a modulus $M$ and a residue $r$. Let $A_\ell(z)=\eta(2z)\eta(2\ell z)/(\eta(z)^2\eta(\ell z)^2)$. Its exponents satisfy $\sum d\,r_d=2+2\ell-2-2\ell=0$, so $A_\ell=\sum\pb_\ell(n)q^n$ exactly. Choose integers $b_d$ for $M\mid d\mid N$ and put
+\[B(z)=\prod_{M\mid d\mid N}\eta(dz)^{b_d}=q^{c}\,g(q^M),\qquad c=\tfrac1{24}\textstyle\sum d\,b_d,\quad g\in 1+q\mathbb Z[[q]].\]
+Suppose $c\in\mathbb Z$ and $c\equiv-r\pmod M$, and that $F=A_\ell B$ satisfies the hypotheses of Lemma~\ref{lem:ghn}. Then
+\[F=q^c g(q^M)\sum_{n\ge0}\pb_\ell(n)q^n,\]
+and the exponents divisible by $M$ are exactly those with $n\equiv r\pmod M$. Hence
+\[G:=F\mid U_M=q^{(c+r)/M}\,g(q)\sum_{n\ge0}\pb_\ell(Mn+r)\,q^n\in M_k(\Gamma_0(N),\chi)\]
+by Lemma~\ref{lem:U}. Since $g$ is a unit in $\mathbb Z[[q]]$, $2^j$ divides every coefficient of $G$ if and only if $2^j\mid\pb_\ell(Mn+r)$ for all $n\ge0$. By the remark after Lemma~\ref{lem:sturm}, it suffices to check the coefficients of $G$ up to $q^S$.
+
+\section{Certificates}
+Table~\ref{tab:cert} lists the multipliers. In each case:
+\begin{itemize}
+\item $\sum (N/d)r_d=0$ for $F=A_\ell B$;
+\item the minimum over the cusps of Ligozat's order is $0$, so the hypotheses of Lemma~\ref{lem:ghn} hold;
+\item $M\mid N$ and $\chi$ is a character modulo $N$, so Lemma~\ref{lem:U} applies (indeed the conductor of $\chi$, $1$ or $3$, even divides $N/M$).
+\end{itemize}
+For (A), $s=2^{156}$ is a square and $k$ is even, so $\chi$ is trivial. In the other cases $k$ is odd and the squarefree part of $s$ is $3$, so $\chi=\bigl(\tfrac{-3}{\cdot}\bigr)$.
+
+\begin{table}[h]\centering\small
+\begin{tabular}{@{}lrrrrrr@{}}\toprule
+$(\ell,M,r)$ & $N$ & $k$ & $c$ & $S$ & $j$ & coeffs\\\midrule
+$(8,32,28)$ & 128 & 18 & 4 & 288 & 5 & 289\\
+$(6,24,17)$ & 288 & 11 & 7 & 528 & 6 & 529\\
+$(6,24,23)$ & 288 & 11 & 1 & 528 & 6 & 529\\
+$(9,36,33)$ & 216 & 15 & 3 & 540 & 7 & 541\\\bottomrule
+\end{tabular}
+\[\begin{aligned}
+B_{8,28}&=\eta_{32}^{69}\eta_{64}^{-29}\eta_{128}^{-2},\\
+B_{6,17}&=\eta_{24}^{61}\eta_{48}^{-31}\eta_{72}^{-16}\eta_{96}^{2}\eta_{144}^{8},\\
+B_{6,23}&=\eta_{24}^{59}\eta_{48}^{-25}\eta_{72}^{-16}\eta_{96}^{-2}\eta_{144}^{8},\\
+B_{9,33}&=\eta_{36}^{88}\eta_{72}^{-43}\eta_{108}^{-26}\eta_{216}^{13}.
+\end{aligned}\]
+\caption{Certificates; $\eta_d=\eta(dz)$. The indices $[\mathrm{SL}_2(\mathbb Z):\Gamma_0(N)]$ are $192$, $576$, $432$.}\label{tab:cert}
+\end{table}
+
+\begin{proposition}\label{prop:comp}
+For each row of Table~\ref{tab:cert}, all coefficients of $q^0,\dots,q^S$ in $G$ are divisible by $2^j$.
+\end{proposition}
+\begin{proof}
+This is an exact integer computation. The failure-sensitive script \texttt{verify.py} expands $F$, applies $U_M$, tests every coefficient $0\le m\le S$, and checks the extraction identity and direct progression. A separate standard-library checker reconstructs the overpartition coefficients by theta inversion and the multiplier by a logarithmic-derivative recurrence, without FLINT. The historical auxiliary checker shared FLINT and a pentagonal-product approach and is not described as independent reproduction. A compact receipt records cusp orders, characters, shifts and exact ranges. The universal conclusion also requires the written modular-form argument above.
+\end{proof}
+
+\begin{proof}[Proof of Theorems~\ref{thm:main} and~\ref{thm:nine}]
+Combine Section~3 with Proposition~\ref{prop:comp}.
+\end{proof}
+
+\begin{remark}
+Explicit witnesses are $\pb_8(28)=86{,}368=32\cdot2699$, $\pb_6(17)=3648=64\cdot57$, $\pb_6(23)=25{,}024=64\cdot391$ and $\pb_9(69)=594{,}986{,}112=128\cdot4{,}648{,}329$. Thus none of the four moduli can be doubled uniformly. Stronger subprogressions are not excluded. The integer-programming discovery search is not a proof prerequisite and no minimality of its multipliers is claimed.
+\end{remark}
+
+\section*{Version and assurance}
+Version 1.1.0-candidate, DOI \url{https://doi.org/10.5281/zenodo.23320550}. Unrefereed candidate; internal exact checking and AI-assisted review are not formal verification or external peer review.
+\begin{thebibliography}{9}
+\bibitem{BSC} H.~S.~Sumanth Bharadwaj, N.~Sujatha and S.~Chandankumar, Arithmetic properties of the 2-color overpartition function $\overline{p}_\ell(n)$, arXiv:2607.16608 (2026).
+\bibitem{Ono} K.~Ono, \emph{The Web of Modularity: Arithmetic of the Coefficients of Modular Forms and $q$-series}, CBMS Regional Conf. Ser. Math. 102, Amer. Math. Soc., 2004.
+\bibitem{Radu} S.~Radu, An algorithmic approach to Ramanujan's congruences, \emph{Ramanujan J.} 20 (2009), 215--251.
+\bibitem{Sturm} J.~Sturm, On the congruence of modular forms, in \emph{Number Theory (New York, 1984--1985)}, Lecture Notes in Math. 1240, Springer, 1987, 275--280.
+\end{thebibliography}
+\end{document}

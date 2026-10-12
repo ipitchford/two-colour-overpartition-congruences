@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: Cite the exact candidate version.
+title: "Two-colour overpartitions: exact certificates and parameter families"
+authors:
+  - name: Anonymous
+version: 1.1.0-candidate
+date-released: 2026-10-12
+doi: 10.5281/zenodo.23320550
+url: https://github.com/ipitchford/two-colour-overpartition-congruences
+license: CC0-1.0

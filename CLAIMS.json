@@ -1,0 +1,31 @@
+{
+  "version": "1.1.0-candidate",
+  "status": "unrefereed-candidate",
+  "doi": "10.5281/zenodo.23320550",
+  "claims": [
+    {
+      "id": "A-fixed",
+      "paper": "papers/certificates/paper.tex",
+      "locator": "thm:main and thm:nine",
+      "statement": "Four exact progressions modulo32,64,64,128."
+    },
+    {
+      "id": "B-mod8",
+      "paper": "papers/families/paper.tex",
+      "locator": "thm:one",
+      "statement": "For ell>0, all pbar_ell(4n+3) vanish mod8 iff ell=0,1mod4."
+    },
+    {
+      "id": "B-support",
+      "paper": "papers/families/paper.tex",
+      "locator": "thm:support",
+      "statement": "ell=d^2 or2d^2; N>0 outside both integer binary-form supports implies zero mod16."
+    },
+    {
+      "id": "B-dyadic",
+      "paper": "papers/families/paper.tex",
+      "locator": "thm:oddpart",
+      "statement": "Odd part ell=1mod8 implies zero mod16 at every2^alpha(8n+7)."
+    }
+  ]
+}

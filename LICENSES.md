@@ -1,0 +1,1 @@
+Original manuscript, claims, metadata and data:CC0-1.0. Original executable code:MIT. Third-party papers are cited, not redistributed. python-flint and FLINT retain upstream LGPL terms and are installed separately. Private reviewer documents are not redistributed; adapted reviewer checker provenance is recorded in PROVENANCE.md.

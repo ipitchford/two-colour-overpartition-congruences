@@ -1,0 +1,145 @@
+{
+  "version": "1.1.0-candidate",
+  "files": [
+    {
+      "path": ".github/workflows/verify.yml",
+      "size_bytes": 506,
+      "sha256": "9696aee7619eddd7b760b75c687ebf026953a4669e5a2c0cf6de3ed18d13bc1d"
+    },
+    {
+      "path": ".zenodo.json",
+      "size_bytes": 1394,
+      "sha256": "33c45254cad6c1933876df8fb08027d0a85d5d273254164b2fb53333c1437aaf"
+    },
+    {
+      "path": "AI_INDEX.md",
+      "size_bytes": 2011,
+      "sha256": "68de7893258164d8eb6a114f26f34dc2f550c30cb0686ccbe9f4249fc35cb35f"
+    },
+    {
+      "path": "ASSURANCE.md",
+      "size_bytes": 1385,
+      "sha256": "fa06dbf85a9f2fc33e148e02605e7ae7e83cbc10b68580d4a83944e6f47f1389"
+    },
+    {
+      "path": "CITATION.cff",
+      "size_bytes": 338,
+      "sha256": "57325abdf7fae87c3d450304b27947f2cb4e4744b041c433ef4402b4374e8933"
+    },
+    {
+      "path": "CITATION_AUDIT.md",
+      "size_bytes": 1819,
+      "sha256": "0cbb8fcecb26e27294d85d918ac0c75190fddb2889f89b2b0064d2018d18b1c6"
+    },
+    {
+      "path": "CLAIMS.json",
+      "size_bytes": 915,
+      "sha256": "d37d4279c02232ab596cf042978e52ef0e9f2c711490bbe88cdf9a1854d8d4cb"
+    },
+    {
+      "path": "ENVIRONMENT.txt",
+      "size_bytes": 209,
+      "sha256": "4952b089c73b1b60eb3f36ccde889390542212ffba9eedd83633fcb687b01523"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 112,
+      "sha256": "dd35004d2d1dade745bd2fe611fee9dfef8ad8f2f8c162ba3335d54b84ae8557"
+    },
+    {
+      "path": "LICENSE-CODE",
+      "size_bytes": 1084,
+      "sha256": "7aa2df7f6303719cc83509b6bef2739f07eba03cf2d74ad232319783c257973d"
+    },
+    {
+      "path": "LICENSES.md",
+      "size_bytes": 331,
+      "sha256": "c9cb84e46617353e17fcedcf78c413ead1e14411c804d79013cedf7d844b4a2f"
+    },
+    {
+      "path": "PROVENANCE.md",
+      "size_bytes": 893,
+      "sha256": "7596f5c51e23054aaf3039e9cf1b3f13fc37d9dfc232e77bd72f6830c98180f0"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 1589,
+      "sha256": "ceb54b10d9f9ea4b979cebfb305909742581dbc70acca2cbb1d2c8d79bbbd97a"
+    },
+    {
+      "path": "REPLAY_RECEIPT.md",
+      "size_bytes": 916,
+      "sha256": "e2f9ba064f5f63c57ac0143c58d3ca28b1b5ec7f0e9a66c88c2212f3bc8a9ed8"
+    },
+    {
+      "path": "STATUS.md",
+      "size_bytes": 258,
+      "sha256": "97f0080e9b9281828a893bf766751b7fb21642dae3195f6aa7a0febf0fe83ecc"
+    },
+    {
+      "path": "check_package.py",
+      "size_bytes": 382,
+      "sha256": "4effaedf568a6a11df469764548ff9557e733bc7057f0b413c92e30f10861698"
+    },
+    {
+      "path": "checks/families.py",
+      "size_bytes": 2478,
+      "sha256": "d963c155c78f4d59ab4e20780420ed77e02644c3b3a949dd02c67fefeb9e60d2"
+    },
+    {
+      "path": "checks/independent_bsc_audit.py",
+      "size_bytes": 8719,
+      "sha256": "f9ba60735a5c7f40c88453242932db2d1f8521b02f0ed7982693a8ff7b422225"
+    },
+    {
+      "path": "negative_controls.py",
+      "size_bytes": 688,
+      "sha256": "007ff430b9f4e48a8b11962afffd4c23dbac2ce56b7d4bc3ceade221a1f86251"
+    },
+    {
+      "path": "paper.pdf",
+      "size_bytes": 632971,
+      "sha256": "f1f742298ca51748adb5fe0526fff1a137fe61602f87901b77129cf46779dfa8"
+    },
+    {
+      "path": "papers/certificates/code/verify.py",
+      "size_bytes": 5455,
+      "sha256": "0a1ca2378495ae0b7009a386432f8e81575b3ef100864615e9d6b6d612f85213"
+    },
+    {
+      "path": "papers/certificates/paper.pdf",
+      "size_bytes": 295572,
+      "sha256": "2e4523b5f0d82c8232a58807b39bbe4ef5e942a54ee503c8944d29a2f0a72f85"
+    },
+    {
+      "path": "papers/certificates/paper.tex",
+      "size_bytes": 9459,
+      "sha256": "2426d872ff151f0979ee76a26959e33b80cb0e03f186a09bfc46a6445f5f1562"
+    },
+    {
+      "path": "papers/families/paper.pdf",
+      "size_bytes": 306943,
+      "sha256": "83a9e81bec184fa51a364c4417f532c35550516325718cedbca300c0cd1b0048"
+    },
+    {
+      "path": "papers/families/paper.tex",
+      "size_bytes": 13437,
+      "sha256": "12e191ab4871e32d1c92b6a9161baaa7c989205d90c39d5bf2cf040c0c34e2f9"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 20,
+      "sha256": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d"
+    },
+    {
+      "path": "reviews/revision-response.md",
+      "size_bytes": 1611,
+      "sha256": "5de712cc881141716b1bb3799c59a11bc29a8581d916b5fa1f6d2532cb8cca1a"
+    },
+    {
+      "path": "verify.py",
+      "size_bytes": 900,
+      "sha256": "5a40eb63c6a11e0256e31f26aaa8aac7b8742655121060196516e6cc58fb5838"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+CPython 3.13.5, macOS arm64 local replay; python-flint0.9.0. Standard-library certificate reconstruction does not use FLINT. TeX Live2026 typesetting. CI uses Python3.13; all runs remain producer-coordinated.

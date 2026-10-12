@@ -1,0 +1,130 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}\usepackage{url}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\pb}{\overline{p}}
+\title{Parameter classification and binary-form support for 2-colour overpartitions}
+\author{Anonymous}\date{12 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+Let $\sum_{n\ge0}\pb_\ell(n)q^n=f_2f_{2\ell}/(f_1^2f_\ell^2)$ with $f_k=\prod_{m\ge1}(1-q^{km})$. Bharadwaj, Sujatha and Chandankumar conjectured that $\pb_\ell(4n+3)\equiv0\pmod 8$ for every $\ell\equiv0,1\pmod4$, and that $\pb_9(2^\alpha(8n+7))\equiv0\pmod{16}$ for every $\alpha\ge1$. We prove both statements; the second in fact holds for all $\alpha\ge0$. We further classify the modulo-$8$ parameter range exactly, prove a binary-form support theorem for square or twice-square parameters, and extend the dyadic family to every parameter whose odd part is $1$ modulo $8$. The methods are elementary and classical.
+\end{abstract}
+
+\section{Introduction}
+Write $f_k=(q^k;q^k)_\infty$, $\varphi(q)=\sum_{k\in\mathbb Z}q^{k^2}$, and
+\[\sum_{n\ge0}\pb_\ell(n)q^n=\frac{f_2\,f_{2\ell}}{f_1^2\,f_\ell^2}.\]
+These functions were studied in~\cite{BSC}. The authors proved many congruences modulo~8, including $\pb_\ell(4n+3)\equiv0\pmod 8$ for $\ell\equiv0\pmod8$, and stated the following conjectures in their final section.
+
+\begin{theorem}\label{thm:one}
+For a positive integer $\ell$, the congruence $\pb_\ell(4n+3)\equiv0\pmod8$ holds for every integer $n\ge0$ if and only if $\ell\equiv0,1\pmod4$.
+\end{theorem}
+
+\begin{theorem}\label{thm:two}
+For every $\alpha\ge0$ and $n\ge0$, $\pb_9\bigl(2^\alpha(8n+7)\bigr)\equiv0\pmod{16}$.
+\end{theorem}
+
+The sufficient direction of Theorem~\ref{thm:one} is Conjecture~1 of~\cite{BSC}, where the case $\ell\equiv0\pmod 8$ is proved. Theorem~\ref{thm:two} for $\alpha\ge1$ is the first part of their Conjecture~3; no prior statement of the case $\alpha=0$ was located in our bounded search. For comparison, \cite{BSC} state a $2$-power family $\pb_8(2^\alpha(8n+7))\equiv0\pmod{32}$ in Theorem~4.4, equation~(4.51); the companion certificate paper discusses the source's overlap with its conjecture list. The hypothesis $\ell\equiv0,1\pmod4$ in Theorem~\ref{thm:one} cannot be dropped: $\pb_2(3)\equiv4$, $\pb_3(3)\equiv2$, $\pb_6(7)\equiv4$ and $\pb_7(7)\equiv2\pmod 8$.
+
+\paragraph{Related work and method.} The arguments use classical reciprocal-theta expansions and representation parity, as in Mahlburg~\cite{Mahlburg}, Hirschhorn--Sellers~\cite{HS} and Kim~\cite{Kim08}. For $\ell=1$, the coefficients count unrestricted overpartition pairs: Keister--Sellers--Vary \cite[Theorem~9, $k=2$]{KSV} implies the modulo-$8$ result. For every $4\mid\ell$, it follows immediately from \cite[Theorem~2, equation~(6)]{HS} and the convolution
+\[\pb_\ell(4n+3)=\sum_{j=0}^{\lfloor(4n+3)/\ell\rfloor}\pb(4n+3-\ell j)\pb(j).\]
+Each first argument is $3$ modulo $4$. The uniform argument and extensions below are applications of established methods, not new techniques. The bounded literature check found no matching full parameter theorem, but does not certify priority. For $\ell=2$ the object is the overcubic partition function, so known overcubic congruences are relevant special cases, not a new object.
+
+Throughout, $S_j=\sum_{k\ge1}q^{jk^2}$, so $\varphi(q^j)=1+2S_j$ and $\varphi(-q^j)=1+2\sum_{k\ge1}(-1)^kq^{jk^2}$. All congruences between power series are coefficientwise.
+
+\section{Gauss's identities}
+\begin{lemma}\label{lem:gauss}
+$\varphi(-q)=f_1^2/f_2$, $\varphi(q)=f_2^5/(f_1^2f_4^2)$, and hence $\varphi(q)\varphi(-q)=\varphi(-q^2)^2$.
+\end{lemma}
+\begin{proof}
+The two product formulas are classical (Gauss; see~\cite[Entry~22]{Berndt}). Then $\varphi(q)\varphi(-q)=f_2^4/f_4^2=\varphi(-q^2)^2$.
+\end{proof}
+In particular $\sum\pb_\ell(n)q^n=1/\bigl(\varphi(-q)\varphi(-q^\ell)\bigr)$.
+
+\section{Proof of Theorem~\ref{thm:one}}
+\begin{lemma}\label{lem:A}
+Let $A=1/\varphi(-q)$. Then $A\equiv1+2S_1+4(S_2+S_4)\pmod 8$.
+\end{lemma}
+\begin{proof}
+Applying Lemma~\ref{lem:gauss} with $q$ and with $q^2$ gives $\varphi(-q)=\varphi(-q^2)^2/\varphi(q)$ and $\varphi(-q^2)^2=\varphi(-q^4)^4/\varphi(q^2)^2$, so
+\[A=\frac{\varphi(q)\,\varphi(q^2)^2}{\varphi(-q^4)^4}.\]
+Since $\varphi(-q^4)=1+2X$ with $X\in\mathbb Z[[q]]$, we have $\varphi(-q^4)^4\equiv1\pmod8$, and so its inverse is $\equiv1\pmod 8$. Next, $\varphi(q^2)^2=1+4S_2+4S_2^2$, and $S_2^2\equiv S_4\pmod2$ because $g^2\equiv g(q^2)\pmod2$ for every $g\in\mathbb Z[[q]]$. Hence $\varphi(q^2)^2\equiv1+4S_2+4S_4\pmod 8$ and $A\equiv(1+2S_1)(1+4S_2+4S_4)\equiv1+2S_1+4S_2+4S_4\pmod8$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:one}]
+By Lemma~\ref{lem:A} write $A(q)\equiv1+2a+4b$ with $a=S_1$ and $b=S_2+S_4$. Then
+\[A(q)A(q^\ell)\equiv1+2\bigl(a(q)+a(q^\ell)\bigr)+4\bigl(b(q)+b(q^\ell)\bigr)+4a(q)a(q^\ell)\pmod8.\]
+Every exponent occurring in $b(q)$ or $b(q^\ell)$ is even. The exponents in $a(q)$ are squares, hence $\equiv0,1\pmod4$. Those in $a(q^\ell)$ are $\ell k^2$, also $\equiv0,1\pmod4$ when $\ell\equiv0,1\pmod 4$. The exponents in $a(q)a(q^\ell)$ are $j^2+\ell k^2\equiv0,1,2\pmod 4$. So no exponent $\equiv3\pmod4$ occurs on the right, and the coefficient of $q^{4n+3}$ in $A(q)A(q^\ell)=\sum\pb_\ell(n)q^n$ is divisible by~$8$.
+\end{proof}
+
+For completeness, the converse in Theorem~\ref{thm:one} has uniform witnesses. If $\ell\equiv3\pmod4$, then $\pb_\ell(\ell)=\pb(\ell)+2\equiv2\pmod8$. If $\ell\equiv2\pmod4$, then $\pb_\ell(\ell+1)=\pb(\ell+1)+2\pb(1)\equiv4\pmod8$. Here the ordinary congruence follows from Lemma~\ref{lem:A}. The witness $\pb_4(3)=8$ shows that modulus $8$ is sharp uniformly over the admissible parameter family.
+\section{Proof of Theorem~\ref{thm:two}}
+
+Let $N=2^\alpha m$ with $\alpha\ge0$ and $m\equiv7\pmod8$. We use three facts.
+\begin{enumerate}
+\item[(F1)] $N$ is not a perfect square, since its odd part $m$ is not $\equiv1\pmod 8$.
+\item[(F2)] $N$ is not a sum of two squares: $m\equiv3\pmod4$ has a prime factor $p\equiv3\pmod4$ to an odd power.
+\item[(F3)] $N\ne X^2+2Y^2$ for integers $X,Y$. A positive integer represented by $X^2+2Y^2$ has each prime $p\equiv5,7\pmod8$ to an even power~\cite[Ch.~1]{Cox}. Its odd part is therefore a product of primes $\equiv1,3\pmod8$ and odd squares, which is $\equiv1$ or $3\pmod 8$. Here $m\equiv7$.
+\end{enumerate}
+
+\begin{proof}[Proof of Theorem~\ref{thm:two}]
+Write $\varphi(-q)=1+2s$ and $\varphi(-q^9)=1+2t$, where $s=\sum_{k\ge1}(-1)^kq^{k^2}$ and $t=s(q^9)$. Then, modulo $16$,
+\[\frac1{\varphi(-q)\varphi(-q^9)}\equiv\sum_{i+j\le3}(-2)^{i+j}s^it^j .\]
+We show that the coefficient $c$ of $q^N$ in each term $(-2)^{i+j}s^it^j$ with $1\le i+j\le3$ is $\equiv 0\pmod{16}$.
+
+\emph{Degree 1.} $s$ and $t$ are supported on squares, so their coefficients at $q^N$ vanish by (F1).
+
+\emph{Degree 2.} The terms $s^2$, $st$ and $t^2$ are supported on numbers $a^2+b^2$, $a^2+(3b)^2$ and $(3a)^2+(3b)^2$. Their coefficients at $q^N$ vanish by (F2).
+
+\emph{Degree 3.} These terms carry the factor $8$, so it suffices that each of $s^3,s^2t,st^2,t^3$ has an even coefficient at $q^N$. Each coefficient is a signed count of ordered triples, so its parity equals that of the number of triples.
+\begin{itemize}
+\item For $s^3$, count triples $(a,b,c)$ of positive integers with $a^2+b^2+c^2=N$, under the symmetric group. Orbits with distinct entries have size~$6$. Orbits with exactly two equal entries have size~$3$ and correspond to $N=2x^2+y^2$ with $x\ne y$, which is impossible by (F3). The orbit $a=b=c$ needs $N=3a^2$, whose odd part is $\equiv3\pmod 8$; this is impossible.
+\item For $s^2t$, consider $a^2+b^2+9c^2=N$ and swap $a$ and $b$. A fixed point gives $N=2a^2+(3c)^2$, impossible by (F3).
+\item For $st^2$, consider $a^2+9b^2+9c^2=N$ and swap $b$ and $c$. A fixed point gives $N=a^2+2(3b)^2$, impossible by (F3).
+\item For $t^3$, the coefficient is zero unless $9\mid N$, in which case $N/9=2^\alpha(m/9)$ with $m/9\equiv7\pmod8$, and the $s^3$ argument applies to $N/9$.
+\end{itemize}
+Hence every coefficient is even, and $\pb_9(N)\equiv0\pmod{16}$.
+\end{proof}
+
+\begin{remark}
+The public checker \texttt{checks/families.py} uses exact modular arithmetic. It tests 60,000 modulo-eight instances, 60 excluded-parameter witnesses, 274,780 dyadic instances through argument 20,000 across 55 parameters, and 10,416 binary-form support instances through argument 1,000. A direct Euler-product expansion cross-checks the inverse-theta coefficients through argument 180. These finite checks complement, but do not replace, the universal proofs.
+\end{remark}
+
+\section{A support theorem and a larger dyadic family}
+\begin{theorem}\label{thm:support}
+Let $d$ be a positive integer and $\ell=d^2$ or $2d^2$. If $N>0$ is represented by neither $X^2+Y^2$ nor $X^2+2Y^2$, with integral coordinates including zero, then $\pb_\ell(N)\equiv0\pmod{16}$.
+\end{theorem}
+\begin{proof}
+Set $s=\sum_{k\ge1}(-1)^kq^{k^2}$ and $t=s(q^\ell)$. In $\mathbb Z[[q]]$,
+\[H_\ell\equiv1-2(s+t)+4(s^2+st+t^2)-8(s^3+s^2t+st^2+t^3)\pmod{16}.\]
+The linear supports are squares and $\ell$ times squares. The quadratic supports are $x^2+y^2$, $x^2+\ell y^2$ and $\ell(x^2+y^2)$. All lie in the union of the two stated representation sets; for twice-square $\ell$, use $2d^2(x^2+y^2)=(d(x+y))^2+(d(x-y))^2$.
+Modulo $2$, Frobenius reduces the cubic supports to
+\[x^2+2y^2,\quad2x^2+\ell y^2,\quad x^2+2\ell y^2,\quad\ell(x^2+2y^2).\]
+For square $\ell$ these embed in $X^2+2Y^2$. For twice-square $\ell$, the middle two embed in sums of two squares, using $2x^2+2d^2y^2=(x+dy)^2+(x-dy)^2$ and $x^2+4d^2y^2=x^2+(2dy)^2$. Finally $2d^2(x^2+2y^2)=(2dy)^2+2(dx)^2$. Thus at the stipulated $N$ the linear and quadratic coefficients vanish and the cubic coefficients are even. This proves the result. The constant term explains why $N>0$ is required.
+\end{proof}
+
+\begin{theorem}\label{thm:oddpart}
+Let $\ell=2^a u$, where $a\ge0$ and $u>0$ is odd with $u\equiv1\pmod8$. Then for every $\alpha,n\ge0$,
+\[\pb_\ell\bigl(2^\alpha(8n+7)\bigr)\equiv0\pmod{16}.\]
+\end{theorem}
+\begin{proof}
+Call a positive value admissible if its odd part is not $7\pmod8$. Multiplication by a power of two, an odd square, or $u$ preserves admissibility. Every positive value of $X^2+uY^2$ and $X^2+2uY^2$ is admissible: remove a common power of two from the coordinates. For the first form, opposite parities give odd residue $1$ or $5$ modulo $8$; both odd give residue $2$ modulo $8$, hence valuation exactly one and odd part $1$ modulo $4$. For the second, odd $X$ gives residue $1$ or $3$ modulo $8$. Even $X$ and odd $Y$ give residue $2$ or $6$ modulo $16$, so the odd part is $1$ or $3$ modulo $8$. Zero coordinates are included; both zero give no positive value.
+
+Absorbing even powers into $Y$ shows the same for $X^2+2^b uY^2$, $b\ge0$, also with $u=1$. Apply the expansion in the preceding proof. All its linear and quadratic supports are admissible. Of the four cubic parity supports displayed there, the first, third and fourth are admissible immediately. For $2x^2+\ell y^2$, if $a\ge1$ factor out two and use $x^2+2^{a-1}u y^2$. If $a=0$, remove a common power of four from $uy^2+2x^2$: odd $y$ gives residue $1$ or $3$ modulo $8$; even $y$ and odd $x$ give $2$ or $6$ modulo $16$. The same exclusion follows. At an exponent of odd part $7$, the lower-degree terms vanish and the cubic coefficients are even, proving the congruence.
+\end{proof}
+
+Theorem~\ref{thm:oddpart} includes all square and twice-square parameters and also $\ell=17,34$, for example. It is a sufficient condition, not a classification. It does not enlarge Theorem~\ref{thm:support}: $21$ is represented by neither of its two forms, but $\pb_{17}(21)=9932\equiv12\pmod{16}$. The witness $\pb_9(15)=1552=16\cdot97$ forbids doubling the modulus uniformly. The support theorem arose in the supplied review, and the odd-part extension in a fresh targeted AI-assisted check during revision; neither carries a first-proof claim. Their significance lies in explaining the parameter dependence, not in introducing a new method.
+
+\section*{Version and assurance}
+Version 1.1.0-candidate, DOI \url{https://doi.org/10.5281/zenodo.23320550}. Unrefereed candidate; internal exact checking and AI-assisted review are not formal verification or external peer review.
+\begin{thebibliography}{9}
+\bibitem{BSC} H.~S.~Sumanth Bharadwaj, N.~Sujatha and S.~Chandankumar, Arithmetic properties of the 2-color overpartition function $\overline{p}_\ell(n)$, arXiv:2607.16608 (2026).
+\bibitem{Berndt} B.~C.~Berndt, \emph{Ramanujan's Notebooks, Part III}, Springer, New York, 1991.
+\bibitem{HS} M.~D.~Hirschhorn and J.~A.~Sellers, Arithmetic relations for overpartitions, \emph{J. Combin. Math. Combin. Comput.} 53 (2005), 65--73.
+\bibitem{Kim08} B.~Kim, The overpartition function modulo 128, \emph{Integers} 8 (2008), A38.
+\bibitem{KSV} D.~M.~Keister, J.~A.~Sellers and R.~G.~Vary, Some arithmetic properties of overpartition $k$-tuples, \emph{Integers} 9 (2009), 181--190, A17.
+\bibitem{Mahlburg} K.~Mahlburg, The overpartition function modulo small powers of 2, \emph{Discrete Math.} 286 (2004), 263--267.
+\bibitem{Cox} D.~A.~Cox, \emph{Primes of the Form $x^2+ny^2$}, 2nd ed., Wiley, 2013.
+\end{thebibliography}
+\end{document}

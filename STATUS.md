@@ -1,0 +1,1 @@
+Unrefereed mathematical proof-candidate collection. Exact computational checks and internal AI-assisted proof inspection are recorded; not journal peer reviewed or formally verified. Prospectively specialized significance; no 3-star or 4-star overall claim.
